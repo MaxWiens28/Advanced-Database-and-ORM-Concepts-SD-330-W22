@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Advanced_Database_and_ORM_Concepts_SD_330_W22SD.Models.Question>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<ul>
+    @foreach(Question q in Model)
+    {
+        <li>
+            <h5>@q.Title</h5>
+            <h6>@q.User</h6>
+            <h6>@q.User.Reputation*5</h6>
+            <h6>@q.Description</h6>
+            <button type="submit">Delete</button>
+        </li>
+    }
+</ul>

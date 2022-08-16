@@ -1,0 +1,15 @@
+﻿@model Question
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<h5>@Model.Title</h5>
+<h6>@Model.User</h6>
+<h6>@Model.User.Reputation*5</h6>
+<h6>@Model.Description</h6>
+
+
+

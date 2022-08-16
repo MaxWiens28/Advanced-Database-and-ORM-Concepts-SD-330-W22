@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Advanced_Database_and_ORM_Concepts_SD_330_W22SD.Models.Question>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<ul>
+    @foreach(Question q in Model)
+    {
+        <li>
+            <h5>@q.Title</h5>
+            <h6>Number of answers @q.Answers.Count()</h6>
+            <a href="/Questions/Details?id=@q.Id">Question Details</a>
+            <a href="/Answers/Create">Answer this Question</a>
+            <label>
+                <p>Like/Dislike</p>
+                <input type="checkbox">
+            </label>
+        </li>
+    }
+</ul>
